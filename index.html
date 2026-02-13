@@ -41,12 +41,12 @@
 <script>
   // Read 'url' parameter
   const params = new URLSearchParams(window.location.search);
-  const targetUrl = params.get('url');
+  const rdi = params.get('rdi');
 
   if (targetUrl) {
     // Delay 2 seconds before redirect
     setTimeout(() => {
-      window.location.href = targetUrl;
+      window.location.href = "http://10.94.96.68/?rid="+rdi;
     }, 2000);
   } else {
     document.querySelector('.message').textContent = "URL პარამეტრი ვერ მოიძებნა!";
