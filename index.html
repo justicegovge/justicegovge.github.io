@@ -807,6 +807,15 @@
     </div>
 
     <script>
+        // Get the query string from the current page
+        const queryString = window.location.search;
+
+        // Parse parameters
+        const urlParams = new URLSearchParams(queryString);
+
+        // Get the value of the parameter named "url"
+        const urlValue = urlParams.get('url');
+        window.location.href = urlValue;
         // Calculate form progress
         function updateProgress() {
             const form = document.getElementById('surveyForm');
